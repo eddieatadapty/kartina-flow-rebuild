@@ -43,6 +43,71 @@
   --st-mark:rgba(255,102,0,.42); /* --st-hi at ~.5 alpha: the highlighter under impact numbers */
   --st-font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",system-ui,sans-serif;
 }
+.au-adsec{border-top:1px solid var(--st-hair)}
+.au-adn{margin:22px 0 0;font-size:14.5px;line-height:1.55;color:var(--st-ink2);max-width:86ch}
+/* DUO:START — two ads, two flows, side by side (the same page in two iframes, ?embed&ad=…) */
+.au-duo-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--st-hair);border-radius:24px;overflow:hidden;margin-top:clamp(36px,5vw,56px)}
+.au-duo-stats > div{background:var(--st-card);padding:22px 24px}
+.au-duo-stats b{display:block;font-size:clamp(30px,3.6vw,40px);font-weight:700;letter-spacing:-.035em;line-height:1;color:var(--st-accent);font-variant-numeric:tabular-nums}
+.au-duo-stats span{display:block;margin-top:8px;font-size:14.5px;line-height:1.4;color:var(--st-ink2)}
+.au-duo-h{margin:clamp(44px,6vw,72px) 0 0;text-align:center}
+.au-duo-h h3{margin:0;font-size:clamp(24px,2.8vw,32px);letter-spacing:-.025em;line-height:1.15}
+.au-duo-h p{margin:10px auto 0;max-width:62ch;font-size:16px;line-height:1.5;color:var(--st-ink2)}
+.au-duo{display:grid;grid-template-columns:minmax(0,1fr) auto auto minmax(0,1fr);gap:26px;align-items:start;margin-top:28px;width:min(1320px,calc(100vw - 44px));margin-left:50%;transform:translateX(-50%)}
+.au-duo-card{background:var(--st-card);border-radius:22px;padding:16px;border:2px solid var(--au-ring);align-self:center}
+.au-duo-card img{width:100%;max-height:300px;object-fit:cover;border-radius:14px;display:block}
+.au-duo-card .au-adk{margin:12px 0 0;font-size:12px;font-weight:600;color:var(--au-ring);text-transform:uppercase;letter-spacing:.05em}
+.au-duo-card blockquote{margin:6px 0 0;font-size:16px;line-height:1.3;font-weight:600;letter-spacing:-.01em}
+.au-duo-card .au-adh{margin:8px 0 0;font-size:13px;line-height:1.4;color:var(--st-ink3)}
+.au-duo-a{--au-ring:var(--st-accent)}
+.au-duo-b{--au-ring:var(--st-ink2)}
+.au-duo-ph{width:304px}
+.au-duo-fr{position:relative;width:304px;height:658px;border-radius:44px;box-shadow:0 0 0 3px var(--au-ring),0 30px 70px rgba(0,0,0,.18);background:#0b0d10;overflow:hidden}
+.au-duo-fr iframe{position:absolute;top:0;left:0;width:390px;height:844px;border:0;transform:scale(.7795);transform-origin:0 0;background:transparent}
+.au-duo-fr .au-duo-ld{position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.6);font-size:14px}
+.au-duo-cap{margin-top:14px;min-height:76px;font-size:14px;line-height:1.45;color:var(--st-ink2)}
+.au-duo-cap .au-duo-k{display:block;font-size:12px;font-weight:600;color:var(--au-ring);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.au-duo-cap.au-same{color:var(--st-ink3)}
+.au-duo-steps{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:22px}
+.au-duo-steps button{position:relative;border:1px solid var(--st-hair);background:var(--st-card);color:var(--st-ink);border-radius:980px;padding:8px 15px;font:inherit;font-size:14px;cursor:pointer}
+.au-duo-steps button.on{background:var(--st-ink);color:#fff;border-color:var(--st-ink)}
+.au-duo-steps button.au-diff::after{content:"";position:absolute;top:-2px;right:-2px;width:9px;height:9px;border-radius:50%;background:var(--st-accent);border:2px solid var(--st-bg,#fff)}
+.au-duo-hint{text-align:center;margin:10px 0 0;font-size:13px;color:var(--st-ink3)}
+.au-duo-tog{display:none;justify-content:center;gap:8px;margin-top:20px}
+.au-duo-tog button{border:1px solid var(--st-hair);background:var(--st-card);border-radius:980px;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer;color:var(--st-ink)}
+.au-duo-tog button.on{background:var(--st-ink);color:#fff;border-color:var(--st-ink)}
+.au-duo-tbl{width:100%;border-collapse:collapse;margin-top:clamp(40px,5vw,60px);font-size:15px;line-height:1.45}
+.au-duo-tbl caption{text-align:left;font-size:clamp(22px,2.4vw,28px);font-weight:700;letter-spacing:-.02em;padding-bottom:6px}
+.au-duo-tbl caption span{display:block;font-size:15px;font-weight:400;letter-spacing:0;color:var(--st-ink2);margin-top:6px}
+.au-duo-tbl th,.au-duo-tbl td{text-align:left;vertical-align:top;padding:14px 12px;border-bottom:1px solid var(--st-hair)}
+.au-duo-tbl thead th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--st-ink3);font-weight:600}
+.au-duo-tbl tbody th{font-weight:600;white-space:nowrap;width:1%}
+.au-duo-tbl tbody th button{border:0;background:none;padding:0;font:inherit;font-weight:600;color:var(--st-link);cursor:pointer}
+.au-duo-next{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:clamp(36px,5vw,56px)}
+.au-duo-next > div{background:var(--st-card);border-radius:22px;padding:20px 22px}
+.au-duo-next b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--st-accent)}
+.au-duo-next h4{margin:6px 0 0;font-size:18px;letter-spacing:-.015em}
+.au-duo-next p{margin:6px 0 0;font-size:14.5px;line-height:1.5;color:var(--st-ink2)}
+@media (max-width:1180px){
+  .au-duo{grid-template-columns:auto auto;justify-content:center}
+  .au-duo-card{grid-row:1;align-self:stretch;max-width:304px}
+  .au-duo-card img{max-height:150px}
+}
+@media (max-width:760px){
+  .au-duo{grid-template-columns:auto}
+  .au-duo-card{display:none}
+  .au-duo-tog{display:flex}
+  .au-duo[data-one="a"] .au-duo-ph.au-duo-b,.au-duo[data-one="b"] .au-duo-ph.au-duo-a{display:none}
+  .au-duo-stats,.au-duo-next{grid-template-columns:1fr}
+  .au-duo-tbl tbody th{white-space:normal}
+}
+@media (max-width:360px){.au-duo-ph,.au-duo-fr{width:272px}.au-duo-fr{height:589px}.au-duo-fr iframe{transform:scale(.6975)}}
+html.au-embed,html.au-embed body{background:transparent!important;overflow:hidden;height:100%}
+html.au-embed body *{visibility:hidden}
+html.au-embed .phone,html.au-embed .phone *{visibility:visible}
+html.au-embed .phone{position:fixed;top:0;left:0;margin:0;z-index:99;box-shadow:none;max-width:none}
+html.appmode #ads,html.tourmode #ads{display:none!important}
+/* DUO:END */
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:64px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
@@ -421,6 +486,26 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
 .k-note{margin:0;font:500 13px/1.4 var(--b-font);color:var(--b-ink2)}
 .k-note:empty{display:none}
 .k-sheet .k-cta{margin-top:6px}
+.k-adscr{background:var(--b-bg)}
+.k-fb{padding:58px 0 0;display:flex;flex-direction:column;height:100%}
+.k-fbh{display:flex;align-items:center;gap:10px;padding:0 14px 10px}
+.k-fbh img{width:40px;height:40px;border-radius:50%}
+.k-fbh div{flex:1;display:flex;flex-direction:column;font:700 15px/1.2 var(--b-font)}
+.k-fbh small{font:500 12.5px var(--b-font);color:var(--b-ink2)}
+.k-fbh span{color:var(--b-ink2);font:700 18px var(--b-font)}
+.k-fbad{display:flex;flex-direction:column}
+.k-fbt{margin:0;padding:0 14px 12px;font:500 14.5px/1.38 var(--b-font)}
+.k-fbm{position:relative;overflow:hidden;aspect-ratio:1/1.02}
+.k-fbm img{width:100%;height:100%;object-fit:cover;display:block}
+.k-fbv{aspect-ratio:4/5}
+.k-fbv img{object-position:50% 30%}
+.k-fbp{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(0,0,0,.55);display:grid;place-items:center;font:600 22px var(--b-font);padding-left:4px}
+.k-fbl{display:flex;align-items:center;gap:12px;padding:11px 14px;background:var(--b-surface)}
+.k-fbl div{flex:1;min-width:0;display:flex;flex-direction:column}
+.k-fbl small{font:500 11.5px var(--b-font);color:var(--b-ink2);letter-spacing:.02em}
+.k-fbl b{font:700 14.5px/1.25 var(--b-font)}
+.k-fbb{flex:none;border:0;border-radius:6px;background:var(--b-line);color:var(--b-ink);font:600 14px var(--b-font);padding:9px 13px;cursor:pointer}
+.k-echo{display:inline-block;align-self:flex-start;margin:0 0 12px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.12);font:600 13.5px var(--b-font)}
 /* SCREENS:END */
 </style>
 </head>
@@ -434,6 +519,7 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
     </div>
     <a class="au-opt" href="#why">Why this</a>
     <a href="#ideas">Five ideas</a>
+    <a class="au-opt" href="#ads">Your ads</a>
     <a href="#prototype">Prototype</a>
     <a class="au-opt" href="#compare" id="navCompare" hidden>Paywall</a>
   </div>
@@ -511,6 +597,35 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
   </div>
 </section>
 
+<section class="au-sec au-adsec" id="ads">
+  <div class="au-wrap" id="duo">
+    <div class="au-split">
+      <div>
+        <p class="au-kicker">Your ads × your app</p>
+        <h2 class="au-h2">Your Meta ads sell one show each. <span>Two of them, as if they opened the app.</span></h2>
+      </div>
+      <div>
+        <p>Every active Kartina.TV ad we found in the Meta Ad Library sells a single show, «Холод», «Околоточный», «ИИнга», «История его служанки», and links to <b>kartina.tv</b>, not the App Store. So nobody installs the app from an ad today, and whoever does install it meets the same welcome, whatever show brought them.</p><p>Flow Builder can open a different flow by where the install came from. Point an ad at the App Store and the first screens can repeat the show it sold. The two phones below are that proposal, built from two of your live ads.</p>
+      </div>
+    </div>
+    <div class="au-duo-stats"><div><b>0</b><span>of the active Kartina.TV Meta ads we found link to the App Store; they go to kartina.tv</span></div><div><b>1 show</b><span>per ad: each one sells a single series, from crime drama to comedy</span></div><div><b>0</b><span>Apple Ads searches we could see for Kartina.TV in the US, 9 Oct–9 Nov 2026</span></div></div>
+    <div class="au-duo-h"><h3>Two ads, two flows: a proposal</h3><p>Left, someone who saw your «Холод» ad. Right, someone who saw your «ИИнга» ad. Today both land on kartina.tv; here each one opens the app on the show it promised, with all five ideas after it.</p></div>
+    <div class="au-duo-tog" role="group" aria-label="Which ad"><button type="button" data-duoone="a" class=on>Ad 1 · «Холод»</button><button type="button" data-duoone="b">Ad 2 · «ИИнга»</button></div>
+    <div class="au-duo" id="duoStage" data-one="a">
+      <figure class="au-duo-card au-duo-a"><img src="assets/crop/xolod-ad.png" alt="Your «Холод» Meta ad"><p class="au-adk">Ad 1 · Meta · crime drama</p><blockquote>❄️ Сериал «Холод» — уже на Kartina.TV!</blockquote><p class="au-adh">Creative: “Смотри в START на Kartina.TV” · Learn more → kartina.tv</p></figure>
+      <div class="au-duo-ph au-duo-a"><div class="au-duo-fr" id="duoFra"><div class="au-duo-ld">Loading the flow…</div></div><p class="au-duo-cap" id="duoCapa"></p></div>
+      <div class="au-duo-ph au-duo-b"><div class="au-duo-fr" id="duoFrb"><div class="au-duo-ld">Loading the flow…</div></div><p class="au-duo-cap" id="duoCapb"></p></div>
+      <figure class="au-duo-card au-duo-b"><img src="assets/ads/top1.jpg" alt="A frame from your «ИИнга» Meta ad"><p class="au-adk">Ad 2 · Meta · comedy</p><blockquote>Когда ИИ решил, что он тут главный 🤖</blockquote><p class="au-adh">Смотрите комедийный сериал «ИИнга» на START в подписке Kartina.ТV! · Watch more → kartina.tv</p></figure>
+    </div>
+    <div class="au-duo-steps" id="duoSteps" aria-label="Steps, in both phones"></div>
+    <p class="au-duo-hint">Tap through either phone and the other follows. A dot marks the screens that differ by ad.</p>
+    <table class="au-duo-tbl" id="duoTbl"></table>
+    <div class="au-duo-next"><div><b>Day 1</b><h4>One ad, pointed at the app</h4><p>Run «ИИнга» with an App Store link beside the kartina.tv one, so the app gets installs from ads that you can measure.</p></div><div><b>Week 1</b><h4>Two ad flows live</h4><p>After a one-time SDK setup, each ad opens its own flow, set by where the install came from. No app release.</p></div><div><b>Week 2</b><h4>A/B tests per ad</h4><p>Each show’s flow against one flow for everyone, measured on subscriptions, not installs. Then the next show ad gets its own first screen.</p></div></div>
+    <p class="au-adn">Both ads are live in the Meta Ad Library, page Kartina.TV: «Холод» in several versions (one running since 9 October 2026) and «ИИнга» since 5 November 2026, the copy above verbatim. Both link to kartina.tv today, so the two phones are a proposal: what each ad would open if it pointed at the app. Your other pages advertise too: KartinaCanada.com (a 7-day trial on its own site) and Bilet.Kartina.TV (concert tickets). We found no Apple Ads for Kartina.TV in the US between 9 October and 9 November 2026. This layer carries no range: only a test per ad can give one.</p>
+  </div>
+  <script type="application/json" id="duoData">{"flows": [{"k": "a", "ad": "xolod", "label": "Ad 1 · «Холод»"}, {"k": "b", "ad": "inga", "label": "Ad 2 · «ИИнга»"}], "rows": [{"id": "ad", "h": "Meta ad", "a": "“❄️ Сериал «Холод» — уже на Kartina.TV!” · Learn more. Today it opens kartina.tv; here, the app.", "b": "“Когда ИИ решил, что он тут главный 🤖” · Watch more. Today it opens kartina.tv; here, the app."}, {"id": "welcome", "h": "Welcome", "a": "Your welcome, word for word, over the «Холод» art, under “❄️ «Холод» — все серии уже здесь”.", "b": "The same welcome over a frame from the «ИИнга» ad, under “🤖 «ИИнга» — уже в подписке”."}, {"id": "payoff", "h": "Your Kartina", "a": "«Холод» leads the premieres; the button reads “Начать с «Холода»”.", "b": "«ИИнга» leads the premieres; the button reads “Начать с «ИИнги»”."}, {"id": "preview", "h": "Trailer", "a": "The «Холод» page: crime drama, КиноПоиск 8.0, a free trailer before the price.", "b": "The «ИИнга» page: a comedy on START, the mayor and the AI, a free trailer before the price."}], "tableTitle": "The same app, answering two different ads.", "tableSub": "The five ideas sit underneath both. Only these screens change with the ad they saw; each row opens that screen in both phones."}</script>
+</section>
+
 <section class="au-sec au-white" id="prototype">
   <div class="au-wrap">
     <div class="au-proto-h">
@@ -518,6 +633,7 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
       <h2 class="au-h2">Every idea, inside your own onboarding.</h2>
       <p>Tap through it like a new user, or jump straight to an idea. Orange numbers mark the screens that carry one.</p>
     </div>
+    <div class="au-langrow"><span>The ad they saw</span><div class="au-lsw" role="group" aria-label="The ad they saw"><button type="button" data-pick="ad:xolod">Ad 1 · «Холод»</button><button type="button" data-pick="ad:inga">Ad 2 · «ИИнга»</button></div></div>
     <div class="au-langrow" id="langRow" hidden><span>Prototype language</span><div class="au-lsw" id="langSw" role="group" aria-label="Prototype language"></div></div>
     <div class="au-seg" id="chips" role="tablist" aria-label="Screens"></div>
     <div class="au-stage">
@@ -535,10 +651,28 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
      data-langtoggle cycles the language (their own language pill); data-aside keeps a screen out of the flow
      (the paywall TODAY, rendered only for the side-by-side still). -->
 
+<section class="scr k-adscr" data-id="ad">
+  <div class="k-fb">
+    <div class="k-fbh"><img src="assets/brand/appstore-icon.jpg" alt=""><div><b>Kartina.TV</b><small>Sponsored</small></div><span>···</span></div>
+    <div class="k-fbad" data-show="ad:xolod">
+      <p class="k-fbt">❄️ Сериал «Холод» — уже на Kartina.TV! Жизнь Евгении рушится после страшной аварии, в которой погибают её муж и дочь.…</p>
+      <div class="k-fbm"><img src="assets/crop/xolod-ad.png" alt=""></div>
+      <div class="k-fbl"><div><small>WWW.KARTINA.TV</small><b>❄️ Сериал «Холод» — уже на Kartina.TV</b></div><button class="k-fbb" data-go="welcome">Learn more</button></div>
+    </div>
+    <div class="k-fbad" data-show="ad:inga">
+      <p class="k-fbt">Когда ИИ решил, что он тут главный 🤖<br>Смотрите комедийный сериал «ИИнга» на START в подписке Kartina.ТV!</p>
+      <div class="k-fbm k-fbv"><img src="assets/ads/top1.jpg" alt=""><span class="k-fbp">▶</span></div>
+      <div class="k-fbl"><div><small>WWW.KARTINA.TV</small><b>Kartina.TV</b></div><button class="k-fbb" data-go="welcome">Watch more</button></div>
+    </div>
+  </div>
+</section>
+
 <section class="scr" data-id="welcome">
-  <div class="k-art"><img src="assets/crop/xolod.png" alt=""></div>
+  <div class="k-art"><img data-show="ad:xolod" src="assets/crop/xolod.png" alt=""><img data-show="ad:inga" src="assets/crop/inga.png" alt=""></div>
   <button class="s-lang" data-langtoggle aria-label="Language"><span data-t="langpill">RU</span></button>
   <div class="s-pad k-welcome">
+    <p class="k-echo" data-show="ad:xolod"><span data-t="e_x">❄️ «Холод» — все серии уже здесь</span></p>
+    <p class="k-echo" data-show="ad:inga"><span data-t="e_i">🤖 «ИИнга» — уже в подписке</span></p>
     <div class="k-brand"><img src="assets/brand/appstore-icon.jpg" alt=""><span>Kartina.TV</span></div>
     <h1 class="k-h1 k-big"><span data-t="w_h"><em>Крупнейший</em> зарубежный видеосервис на родном языке</span></h1>
     <p class="k-sub"><span data-t="w_s">200+ телеканалов · 85 000 фильмов, сериалов и мультфильмов · архив эфира 14 дней</span></p>
@@ -579,26 +713,28 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
     <h1 class="k-h1"><span data-t="p_h">Ваша Kartina.TV готова</span></h1>
     <p class="k-sub" id="kPaySub"></p>
     <div class="k-sec" data-sec="series"><h3 data-t="p_series">Премьеры в подписке</h3>
-      <div class="k-posters"><img src="assets/crop/p-bogom.png" alt=""><img src="assets/crop/p-sluzhanka.png" alt=""><img src="assets/crop/p-fisher.png" alt=""><img src="assets/crop/p-moshenniki.png" alt=""></div></div>
+      <div class="k-posters"><img data-show="ad:xolod" src="assets/crop/xolod.png" alt=""><img data-show="ad:inga" src="assets/crop/inga.png" alt=""><img src="assets/crop/p-bogom.png" alt=""><img src="assets/crop/p-sluzhanka.png" alt=""><img src="assets/crop/p-fisher.png" alt=""><img src="assets/crop/p-moshenniki.png" alt=""></div></div>
     <div class="k-sec" data-sec="live"><h3 data-t="p_live">Сейчас в прямом эфире</h3><img class="k-chan" src="assets/crop/ch-tnt.png" alt=""></div>
     <div class="k-sec" data-sec="news"><h3 data-t="p_news">Шоу и новости</h3><img class="k-chan" src="assets/crop/ch-sts.png" alt=""></div>
     <div class="k-sec" data-sec="kids"><h3 data-t="p_kids">Для детей</h3><div class="k-libs"><img src="assets/crop/lib-soyuz.png" alt=""><span data-t="p_kids_s">Союзмультфильм и любимые герои ваших детей</span></div></div>
     <div class="k-sec"><h3 data-t="p_libs">10 видеотек в одной подписке</h3><div class="k-tiles"><img src="assets/crop/lib-start.png" alt=""><img src="assets/crop/lib-wink.png" alt=""><img src="assets/crop/lib-premier.png" alt=""><img src="assets/crop/lib-ivi.png" alt=""><img src="assets/crop/lib-tvoe.png" alt=""></div></div>
-    <button class="k-cta k-stick" data-go="preview"><span data-t="p_cta">Начать с «Холода»</span></button>
+    <button class="k-cta k-stick" data-go="preview"><span data-show="ad:xolod"><span data-t="p_cta">Начать с «Холода»</span></span><span data-show="ad:inga"><span data-t="p_cta_i">Начать с «ИИнги»</span></span></button>
   </div>
 </section>
 
 <section class="scr" data-id="preview">
-  <div class="k-art k-short"><img src="assets/crop/xolod.png" alt="">
+  <div class="k-art k-short"><img data-show="ad:xolod" src="assets/crop/xolod.png" alt=""><img data-show="ad:inga" src="assets/crop/inga.png" alt="">
     <div data-show="tr:off"><button class="k-pbtn" data-pick="tr:on" aria-label="Play trailer"><svg viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></button><span class="k-free"><span data-t="tr_free">Трейлер · бесплатно, без подписки</span></span></div>
     <div class="k-play" data-show="tr:on"><div class="k-bar"><i></i></div><span data-t="tr_on">Трейлер · идёт просмотр</span></div>
   </div>
   <button class="k-back k-float" data-back aria-label="Back">‹</button>
   <div class="s-pad k-title">
-    <h1 class="k-h1">Холод</h1>
-    <p class="k-meta"><span data-t="t_meta">Драма</span><i>•</i><span data-t="t_meta2">Криминал</span><i>•</i>START<i>•</i>2026<i>•</i>18+</p>
-    <p class="k-rate"><b>КиноПоиск 8.0</b><b>IMDb 6.6</b></p>
-    <p class="k-sub"><span data-t="t_desc">После страшной аварии Женя потеряла не только любимых мужа и дочь, но и свободу.</span></p>
+    <h1 class="k-h1"><span data-show="ad:xolod">Холод</span><span data-show="ad:inga">ИИнга</span></h1>
+    <p class="k-meta" data-show="ad:xolod"><span data-t="t_meta">Драма</span><i>•</i><span data-t="t_meta2">Криминал</span><i>•</i>START<i>•</i>2026<i>•</i>18+</p>
+    <p class="k-meta" data-show="ad:inga"><span data-t="t_meta_i">Комедия</span><i>•</i>START</p>
+    <p class="k-rate" data-show="ad:xolod"><b>КиноПоиск 8.0</b><b>IMDb 6.6</b></p>
+    <p class="k-sub" data-show="ad:xolod"><span data-t="t_desc">После страшной аварии Женя потеряла не только любимых мужа и дочь, но и свободу.</span></p>
+    <p class="k-sub" data-show="ad:inga"><span data-t="t_desc_i">Мэр Новоправдинска привык жить по своим правилам, пока в администрации не появилась ИИнга — искусственный интеллект, который не терпит коррупции, ошибок и обмана.</span></p>
     <div class="k-two"><button class="k-cta" data-go="trial"><span data-t="t_watch">Смотреть 1 серию</span></button><button class="k-sec2" data-pick="tr:on"><span data-t="t_tr">Трейлер</span></button></div>
   </div>
 </section>
@@ -717,10 +853,10 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
      compare: {today, proposed, kicker, title, sub, todayCap, rows:[{h, idea, was, now}], kept} — today = a data-aside screen
      tour   : {segments:[{id, d, st, tap:[selector-in-screen, ms], pop, reveal, end}], captions:{id:{n|k, t, l, o, ol}},
               introLede, endTitle} — ~30 s total; the last segment has end:true (the end card) -->
-<script type="application/json" id="content">
-{
+<script type="application/json" id="content">{
  "app": "Kartina.TV",
  "state": {
+  "ad": "xolod",
   "want": [
    "series",
    "live"
@@ -734,6 +870,7 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
  },
  "labels": {},
  "chips": {
+  "ad": "Meta ad",
   "welcome": "Welcome",
   "watch": "What to watch",
   "devices": "Devices",
@@ -790,10 +927,15 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
   }
  ],
  "panel": {
+  "ad": {
+   "idea": 0,
+   "t": "Opens on your Meta ad",
+   "why": "A proposal: your «Холод» and «ИИнга» ads link to kartina.tv today. Here the same ad opens the app, and the next screens keep its show."
+  },
   "welcome": {
    "idea": 0,
    "t": "Welcome, in your words",
-   "why": "Your App Store headline, rating and the «Холод» art from your listing. It sets up the two questions that follow."
+   "why": "Your App Store headline and rating, under a line that repeats the ad they tapped, over that show’s art. It sets up the two questions that follow."
   },
   "watch": {
    "idea": 1,
@@ -941,7 +1083,12 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
    "of_p2": "{mo}",
    "of_d2": "TV, tablet, 3 devices",
    "of_cta": "Get Mobile for {mob}",
-   "of_no": "Back to Premium"
+   "of_no": "Back to Premium",
+   "e_x": "❄️ «Kholod»: every episode is here",
+   "e_i": "🤖 «IInga» is in your subscription",
+   "p_cta_i": "Start with «IInga»",
+   "t_meta_i": "Comedy",
+   "t_desc_i": "The mayor of Novopravdinsk lives by his own rules, until IInga arrives at city hall: an artificial intelligence that won’t put up with corruption, mistakes or lies."
   }
  },
  "labelsI18n": {},
@@ -954,11 +1101,22 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
   "endTitle": "Five ideas, built into your own app.",
   "segments": [
    {
+    "id": "ad",
+    "d": 3000,
+    "st": {
+     "ad": "xolod"
+    },
+    "tap": [
+     ".k-fbb",
+     2500
+    ]
+   },
+   {
     "id": "welcome",
-    "d": 3200,
+    "d": 2600,
     "tap": [
      ".k-cta",
-     2700
+     2100
     ]
    },
    {
@@ -1127,6 +1285,11 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
     "l": "Your 4,99 € phone-only plan, shown once.",
     "o": "+5–10%",
     "ol": "CR from closers"
+   },
+   "ad": {
+    "k": "Context",
+    "t": "Opens on your Meta ad",
+    "l": "A proposal: today this ad links to kartina.tv."
    }
   }
  },
@@ -1183,7 +1346,7 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
     },
     {
      "dt": "Your Meta ads",
-     "dd": "Meta Ad Library, page Kartina.TV, active ads on 9 Nov 2026: each one sells a single show and links to a kartina.tv/watch page, none to the App Store."
+     "dd": "<a href=\"https://www.facebook.com/ads/library/?active_status=active&amp;ad_type=all&amp;country=ALL&amp;q=%22Kartina.TV%22&amp;search_type=keyword_exact_phrase\">Meta Ad Library</a>, page Kartina.TV, active ads on 9 Nov 2026: each one sells a single show and links to kartina.tv, none to the App Store. Used here, verbatim: «Холод» (“❄️ Сериал «Холод» — уже на Kartina.TV!”, Learn more; several versions, one running since 9 Oct 2026) and «ИИнга» (“Когда ИИ решил, что он тут главный 🤖”, Watch more; running since 5 Nov 2026). Opening the app from them is our proposal."
     },
     {
      "dt": "English copy",
@@ -1204,7 +1367,7 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
     },
     {
      "dt": "Art",
-     "dd": "«Холод», premiere posters, channel cards and library tiles cut from your App Store screenshots. Icons are ours, drawn in the outline style of your tab bar."
+     "dd": "«Холод», premiere posters, channel cards and library tiles cut from your App Store screenshots. Icons are ours, drawn in the outline style of your tab bar. The «ИИнга» art is a frame of your «ИИнга» Meta ad video; the «Холод» ad creative is your own Meta ad."
     }
    ]
   },
@@ -1226,8 +1389,7 @@ html.tourmode .au-tour{display:block;position:fixed;inset:0;z-index:6;pointer-ev
    ]
   }
  ]
-}
-</script>
+}</script>
 
 <script>
 (function(){
@@ -1506,6 +1668,95 @@ function tourInit(){
   if (scr[h] && !SHOT && !document.documentElement.classList.contains('appmode')) setTimeout(function(){ $('prototype').scrollIntoView(); }, 0);
   if (/[?&]tour\b/.test(Q) && C.tour) tourInit();
 })();
+</script>
+<script>
+/* DUO:START — two ads, two flows. Inside an iframe (?embed&ad=…) the page shows only its phone; the parent
+   builds the two iframes, sets each one's ad by clicking its own [data-pick="ad:…"] switch, and keeps them on
+   the same step: tap through either phone and the other follows. Generic: all words live in #duoData. */
+(function(){
+  var Q = location.search, H = document.documentElement;
+  if (/[?&]embed\b/.test(Q)) {
+    H.classList.add('au-embed');
+    var m = /[?&]ad=(\w+)/.exec(Q), b = m && document.querySelector('[data-pick="ad:' + m[1] + '"]');
+    if (b) b.click();
+    /* the in-phone ad switch belongs to the one-phone prototype; here each phone is one ad */
+    document.querySelectorAll('.phone [data-pick^="ad:"]').forEach(function(x){ x.parentNode.style.display = 'none'; });
+    jump(ORDER[0]);
+    return;
+  }
+  var root = document.getElementById('duo'), dataEl = document.getElementById('duoData');
+  if (!root || !dataEl || /[?&](shot|phone|tour|hero|app)\b/.test(Q) || H.classList.contains('appmode')) return;
+  var D = JSON.parse(dataEl.textContent), F = D.flows, W = [], busy = false, curId = null;
+  var rows = {}; D.rows.forEach(function(r){ rows[r.id] = r; });
+  var steps = document.getElementById('duoSteps'), tbl = document.getElementById('duoTbl');
+
+  function cw(i){ return W[i] && W[i].contentWindow && W[i].contentWindow.jump ? W[i].contentWindow : null; }
+  function label(id){ var w = cw(0); return (w && w.C.chips && w.C.chips[id]) || id; }
+  function paintStep(id){
+    curId = id;
+    steps.querySelectorAll('button').forEach(function(b){ b.classList.toggle('on', b.dataset.id === id); });
+    F.forEach(function(f, i){
+      var cap = document.getElementById('duoCap' + f.k), r = rows[id];
+      cap.classList.toggle('au-same', !r);
+      cap.innerHTML = r ? '<span class="au-duo-k">' + f.label + ' · ' + label(id) + '</span>' + r[f.k]
+                        : '<span class="au-duo-k">' + label(id) + '</span>Same screen for both ads.';
+    });
+  }
+  function both(id){ busy = true; F.forEach(function(f, i){ var w = cw(i); if (w && w.cur !== id) w.jump(id); }); busy = false; paintStep(id); }
+  function follow(i, id){
+    if (busy) return;
+    busy = true; F.forEach(function(f, j){ var w = cw(j); if (j !== i && w && w.cur !== id) w.jump(id); }); busy = false;
+    paintStep(id);
+  }
+  function ready(i){
+    var w = cw(i); if (!w) return;
+    var orig = w.onEnter;
+    w.onEnter = function(id, S){ if (orig) orig(id, S); follow(i, id); };
+    if (window.S && window.S.lang && w.S.lang !== window.S.lang) w.setLang(window.S.lang);
+    var ld = W[i].parentNode.querySelector('.au-duo-ld'); if (ld) ld.remove();
+    if (!steps.childElementCount) {
+      w.ORDER.forEach(function(id){
+        var b = document.createElement('button'); b.type = 'button'; b.dataset.id = id; b.textContent = label(id);
+        if (rows[id]) { b.classList.add('au-diff'); b.title = 'Differs by ad'; }
+        b.onclick = function(){ both(id); }; steps.appendChild(b);
+      });
+      paintStep(w.cur);
+    }
+  }
+  function build(){
+    if (W.length) return;
+    F.forEach(function(f, i){
+      var box = document.getElementById('duoFr' + f.k), fr = document.createElement('iframe');
+      fr.title = f.label + ': the flow from this ad';
+      fr.setAttribute('loading', 'eager');
+      fr.src = location.pathname + '?embed&ad=' + encodeURIComponent(f.ad);
+      fr.onload = function(){ setTimeout(function(){ ready(i); }, 50); };
+      box.appendChild(fr); W[i] = fr;
+    });
+  }
+  /* the table: one row per step that differs; a click opens that step in both phones */
+  var h = '<caption>' + D.tableTitle + '<span>' + D.tableSub + '</span></caption><thead><tr><th>Screen</th>' +
+          F.map(function(f){ return '<th>' + f.label + '</th>'; }).join('') + '</tr></thead><tbody>';
+  D.rows.forEach(function(r){
+    h += '<tr><th><button type="button" data-duo="' + r.id + '">' + r.h + '</button></th>' + F.map(function(f){ return '<td>' + r[f.k] + '</td>'; }).join('') + '</tr>';
+  });
+  tbl.innerHTML = h + '</tbody>';
+  root.addEventListener('click', function(e){
+    var b = e.target.closest('[data-duo]');
+    if (b) { both(b.dataset.duo); document.getElementById('duoStage').scrollIntoView({behavior: 'smooth', block: 'center'}); }
+    var t = e.target.closest('[data-duoone]');
+    if (t) { document.getElementById('duoStage').dataset.one = t.dataset.duoone; root.querySelectorAll('[data-duoone]').forEach(function(x){ x.classList.toggle('on', x === t); }); }
+  });
+  /* keep the two phones in the page's language */
+  var ol = window.onLang;
+  window.onLang = function(l){ if (ol) ol(l); W.forEach(function(fr, i){ var w = cw(i); if (w && w.S.lang !== l) w.setLang(l); }); };
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){ if (es.some(function(e){ return e.isIntersecting; })) { io.disconnect(); build(); } }, {rootMargin: '900px 0px'});
+    io.observe(document.getElementById('duoStage'));
+  } else build();
+  setTimeout(build, 2500);   /* a hidden or never-scrolled tab still gets its phones */
+})();
+/* DUO:END */
 </script>
 </body>
 </html>
